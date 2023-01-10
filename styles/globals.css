@@ -1,9 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@layer components {
+  .leftArrow {
+    @apply absolute top-[80%]  md:top-[70%] left-0 w-12 h-12 flex items-center justify-center bg-white p-1 rounded-full opacity-80 active:scale-95 hover:bg-white/80;
+  }
+  .rightArrow {
+    @apply absolute top-[80%] md:top-[70%] right-0 w-12 h-12 flex items-center justify-center bg-white p-1 rounded-full opacity-80 active:scale-95 hover:bg-white/80;
+  }
+  /* .activeList {
+    @apply after:w-full after:text-white after:h-[1px] after:left-[0%] after:absolute after:top-[1.5rem] after:border-2 after:color-white after:animate-animated-line;
+  }
+  .hoverList {
+    @apply after:hover:w-full after:hover:text-white after:hover:h-[1px] after:hover:left-[0%] hover:text-white after:hover:absolute after:top-[1.5rem] after:hover:border-2 after:hover:color-white after:hover:animate-animated-line;
+  } */
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Poppins';
 }
 
 a {
@@ -13,4 +32,5 @@ a {
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
