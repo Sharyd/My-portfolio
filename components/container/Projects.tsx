@@ -19,7 +19,7 @@ const Projects = () => {
     filterProjects?.length - 1
   );
 
-  const handleWorkFilter = (item: string) => {
+  const handleProjectsFilter = (item: string) => {
     setActiveFilter(item);
 
     if (item !== 'All') {
@@ -65,7 +65,7 @@ const Projects = () => {
             }`}
             key={index}
             onClick={() => {
-              handleWorkFilter(item);
+              handleProjectsFilter(item);
               setSlideIndex(0);
             }}
           >
