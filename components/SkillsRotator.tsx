@@ -22,7 +22,7 @@ const SkillsRotator = () => {
             className="w-10 h-10"
             height={20}
             width={20}
-            src="/../public/assets/mu5.png"
+            src="/../public/assets/css.png"
             alt=""
           />
         </div>
