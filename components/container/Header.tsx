@@ -31,7 +31,7 @@ const Header = () => {
             className="w-full h-3/4 object-cover  md:h-full md:w-full"
             width={400}
             height={300}
-            src="/../public/assets/person2.png"
+            src="/../public/person2.png"
             alt=""
           />
         </motion.div>

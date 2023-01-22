@@ -39,13 +39,13 @@ const Skills = () => {
         <div
           className={` absolute bottom-0 left-0 flex gap-2 items-center ${classes['infinite-move']}`}
         >
-          <BouncingSkills location="/../public/assets/react.png" />
-          <BouncingSkills location="/../public/assets/git.png" />
-          <BouncingSkills location="/../public/assets/sass.png" />
-          <BouncingSkills location="/../public/assets/typescript.png" />
-          <BouncingSkills location="/../public/assets/javascript.png" />
-          <BouncingSkills location="/../public/assets/redux.png" />
-          <BouncingSkills location="/../public/assets/css.png" />
+          <BouncingSkills location="/../public/react.png" />
+          <BouncingSkills location="/../public/git.png" />
+          <BouncingSkills location="/../public/sass.png" />
+          <BouncingSkills location="/../public/typescript.png" />
+          <BouncingSkills location="/../public/javascript.png" />
+          <BouncingSkills location="/../public/redux.png" />
+          <BouncingSkills location="/../public/css.png" />
         </div>
       </div>
     </div>

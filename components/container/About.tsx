@@ -16,7 +16,7 @@ const About = () => {
           transition={{ duration: 1, ease: 'easeInOut', type: 'tween' }}
         >
           <Image
-            src="/../public/assets/computer.jpg"
+            src="/../public/computer.jpg"
             alt="computer image"
             className=" h-1/2 w-[350px] md:w-[500px] lg:w-full lg:h-full object-cover rounded-md"
             width={600}
