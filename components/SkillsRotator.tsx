@@ -13,7 +13,7 @@ const SkillsRotator = () => {
             className="w-10 h-10"
             height={20}
             width={20}
-            src="/../public/react.png"
+            src="/react.png"
             alt=""
           />
         </div>
@@ -22,7 +22,7 @@ const SkillsRotator = () => {
             className="w-10 h-10"
             height={20}
             width={20}
-            src="/../public/css.png"
+            src="/css.png"
             alt=""
           />
         </div>
@@ -31,7 +31,7 @@ const SkillsRotator = () => {
             className="w-10 h-10"
             height={20}
             width={20}
-            src="/../public/javascript.png"
+            src="/javascript.png"
             alt=""
           />
         </div>
@@ -40,7 +40,7 @@ const SkillsRotator = () => {
             className="w-10 h-10"
             height={20}
             width={20}
-            src="/../public/typescript.png"
+            src="/typescript.png"
             alt=""
           />
         </div>
