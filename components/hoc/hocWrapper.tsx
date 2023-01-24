@@ -9,7 +9,7 @@ const AppWrap = (Component: () => JSX.Element) =>
           className={`hidden md:block absolute w-max text-white/60 text-center bottom-[-1rem] left-[50%] -translate-x-1/2 -translate-y-1/2`}
         >
           <p>@{yearNow} Daniel Vacek</p>
-          <p>&copy; For education purposies. Project owns Daniel Vacek</p>
+          <p>&copy; For education purposes. Project owns Daniel Vacek</p>
         </div>
         <a
           className={`absolute bottom-0 right-6 hidden md:block`}

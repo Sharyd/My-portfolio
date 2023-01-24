@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 
 const SkillsRotator = () => {
@@ -6,10 +5,10 @@ const SkillsRotator = () => {
     <div className="flex items-center justify-center">
       <div className="relative flex rotate-6 animate-infinite-rotate">
         <div className="flex items-center justify-center w-60 h-60 bg-black/50 rounded-full">
-          <p className="text-white uppercase">My skills</p>
+          <p className="text-white uppercase">Skills</p>
         </div>
         <div className="bg-white rounded-full p-4 w-max absolute left-40 animate-bouncing-first shadow-lg">
-          <Image
+          <img
             className="w-10 h-10"
             height={20}
             width={20}
@@ -18,16 +17,16 @@ const SkillsRotator = () => {
           />
         </div>
         <div className="bg-white rounded-full p-4 w-max absolute top-40 animate-bouncing-second shadow-lg">
-          <Image
+          <img
             className="w-10 h-10"
             height={20}
             width={20}
-            src="/css.png"
+            src="/nextjs.png"
             alt=""
           />
         </div>
         <div className="bg-white rounded-full p-4 w-max absolute top-40 left-40 animate-bouncing-first shadow-lg">
-          <Image
+          <img
             className="w-10 h-10"
             height={20}
             width={20}
@@ -36,7 +35,7 @@ const SkillsRotator = () => {
           />
         </div>
         <div className="bg-white rounded-full p-4 w-max absolute animate-bouncing-second shadow-lg">
-          <Image
+          <img
             className="w-10 h-10"
             height={20}
             width={20}

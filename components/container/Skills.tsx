@@ -1,12 +1,21 @@
-import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import BouncingSkills from '../BouncingSkills';
 import FallingBalls from '../ui/FallingBalls';
 import hocWrapper from '../hoc/hocWrapper';
 import Heading from '../ui/Heading';
 import classes from '../../styles/infiniteMove.module.css';
-
+import { client } from '../../utils/client';
+import SkillsType from '../../types';
 const Skills = () => {
+  const [skills, setSkills] = useState<SkillsType[]>([]);
+
+  useEffect(() => {
+    const query = '*[_type == "skills"] | order(_createdAt asc) ';
+    client.fetch(query).then(data => {
+      setSkills(data);
+    });
+  }, []);
+
   return (
     <div className="flex items-center h-full justify-center flex-col relative mb-24 md:mb-0 ">
       <div className="absolute">
@@ -19,33 +28,25 @@ const Skills = () => {
             <h3 className="px-2 mb-4 text-lg text-white border-b ">Skills</h3>
             <div className="flex items-center justify-center">
               <ul>
-                <li>React</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>NextJS</li>
-                <li>CSS</li>
-                <li>TailwindCSS</li>
-                <li>Recoil</li>
-                <li>Firebase</li>
+                {skills.map(skill => (
+                  <li key={skill._id}>- {skill.name}</li>
+                ))}
               </ul>
             </div>
           </div>
           <p className="text-center">
-            These are my best skills, but i need to learn more. Also i have some
-            knowledge in libraries like Redux, React Query and so on.
+            These are my best skills, but I want to learn more. Furthermore, I
+            have some knowledge of libraries like Redux Toolkit, React Query
+            etc.
           </p>
         </div>
 
         <div
           className={` absolute bottom-0 left-0 flex gap-2 items-center ${classes['infinite-move']}`}
         >
-          <BouncingSkills location="/react.png" />
-          <BouncingSkills location="/git.png" />
-          <BouncingSkills location="/sass.png" />
-          <BouncingSkills location="/typescript.png" />
-          <BouncingSkills location="/javascript.png" />
-          <BouncingSkills location="/redux.png" />
-          <BouncingSkills location="/css.png" />
+          {skills.map(value => (
+            <BouncingSkills key={value._id} skills={value} />
+          ))}
         </div>
       </div>
     </div>

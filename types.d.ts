@@ -16,3 +16,13 @@ export default interface ProjectType {
   _type: string;
   _updatedAt: string;
 }
+
+export default interface SkillsType {
+  name: string;
+  icon: imgURLType;
+  _createdAt: string;
+  _id: string;
+  _rev: string;
+  _type: string;
+  _updatedAt: string;
+}

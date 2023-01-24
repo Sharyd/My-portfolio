@@ -29,23 +29,24 @@ const About = () => {
           transition={{ duration: 1, ease: 'easeInOut' }}
           className="flex flex-col gap-6 items-center md:items-start"
         >
-          <div className="bg-white/60 p-4 mb-6 rounded-md shadow-lg max-w-[23rem] md:w-[30rem]">
+          <div className="bg-white/60 p-4 mb-6 rounded-md shadow-lg max-w-[26rem] md:w-[30rem]">
             <h3 className="text-xl p-2 text-black">My Story</h3>
             <p>
-              My real desire for programming began a year ago. I studied IT in
-              high school, in the past. After school, I never believed that I
-              would be interested in to programming again. So years passed away
-              and I realize it, I had to find a way to my future. So I started
-              to learn web development, especially Frontend. First of all, I was
-              learning the basics of JavaScript and also TypeScript. Then I
-              jumped into React. After that, I was interested in NextJS(React
-              framework for production). But in every application, you need some
-              kind of data and store it in a database. So I started to learn
-              firebase, mongoDB and Sanity. With that, I build some real-world
-              projects like Instagram clone, pokemon Blog, and so on. I
-              realized, that I want to learn so much more in the development
-              world. I want to be in the company of good teammates and with that
-              gain experiences.
+              My passion for programming started a year ago. My field of study
+              in high school was Information Technology. After graduating high
+              school, I would never believe I would ever find a passion and
+              interest in programming again. After some time, I realised I
+              needed to find a way for my future. So I started learning web
+              development, primarily the front-end part. Firstly, I was learning
+              the basics of JavaScript and TypeScript. Then I started
+              programming in React. Afterwards, I was interested in NextJS
+              (React framework for production). Every application has some data
+              to process, retrieve and store. For data management, I needed to
+              learn databases. I started with learning Firebase, MongoDB and
+              Sanity. With those, I built projects like an Instagram clone, a
+              Pokemon blog etc. I want to learn much more about developing
+              applications. I want to work for a company where teamwork is
+              essential. I want to gain new experiences.
             </p>
           </div>
         </motion.div>

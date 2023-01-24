@@ -18,8 +18,8 @@ const Header = () => {
           transition={{ duration: 0.5 }}
           className="w-52 bg-white/70 rounded-md p-4 shadow-lg mb-8 md:mb-0 rotate-12 md:-rotate-12 self-end md:self-start"
         >
-          <p>
-            Hello, My name is Daniel and I want to be your Frontend developer.
+          <p className="text-lg">
+            Hello, I am Daniel, and I want to be your front-end developer.
           </p>
         </motion.div>
         <motion.div

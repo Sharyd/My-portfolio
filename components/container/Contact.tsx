@@ -51,7 +51,7 @@ const Contact = () => {
 
   return (
     <div className="flex flex-col items-center md:w-[700px] justify-center">
-      <Heading>Contact me in to sanity</Heading>
+      <Heading>Contact me</Heading>
       <div className="flex items-center  gap-8 text-white/80 flex-col md:flex-row">
         <motion.div
           whileInView={{ opacity: [0, 1] }}
