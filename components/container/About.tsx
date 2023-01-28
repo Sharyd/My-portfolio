@@ -29,7 +29,7 @@ const About = () => {
           transition={{ duration: 1, ease: 'easeInOut' }}
           className="flex flex-col gap-6 items-center md:items-start"
         >
-          <div className="bg-white/60 p-4 mb-6 rounded-md shadow-lg max-w-[26rem] md:w-[30rem]">
+          <div className="bg-white/60 p-4 mb-6 rounded-md shadow-lg md:max-w-[450px] max-w-[350px] ">
             <h3 className="text-xl p-2 text-black">My Story</h3>
             <p>
               My passion for programming started a year ago. My field of study

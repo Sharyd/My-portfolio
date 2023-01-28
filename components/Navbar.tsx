@@ -9,9 +9,9 @@ const Navbar = () => {
 
   const arrayOfList = ['home', 'about', 'projects', 'skills', 'contact'];
   const hoverListClass =
-    'after:hover:w-full after:hover:text-white after:hover:left-0 hover:text-white after:hover:absolute after:top-[1.5rem]  after:hover:border-2 after:hover:color-white after:hover:animate-animated-line';
+    'after:hover:w-full after:hover:text-white after:hover:left-0 hover:text-white after:hover:absolute after:top-[1.8rem] md:after:top-[1.5rem]  after:hover:border-2 after:hover:color-white after:hover:animate-animated-line';
   const activeListClass =
-    'after:w-full after:text-white after:left-0 after:absolute after:top-[1.5rem]  after:border-2 after:color-white after:animate-animated-line';
+    'after:w-full after:text-white after:left-0 after:absolute after:top-[1.8rem] md:after:top-[1.5rem] after:border-2  after:color-white after:animate-animated-line';
 
   useEffect(() => {
     const handleScroll = () => {

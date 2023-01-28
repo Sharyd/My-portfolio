@@ -34,15 +34,15 @@ const Skills = () => {
               </ul>
             </div>
           </div>
-          <p className="text-center">
-            These are my best skills, but I want to learn more. Furthermore, I
+          <p className="text-center p-2">
+            These are my best skills, but I need to learn more. Furthermore, I
             have some knowledge of libraries like Redux Toolkit, React Query
             etc.
           </p>
         </div>
 
         <div
-          className={` absolute bottom-0 left-0 flex gap-2 items-center ${classes['infinite-move']}`}
+          className={`absolute bottom-0 left-0 flex gap-2 items-center ${classes['infinite-move']}`}
         >
           {skills.map(value => (
             <BouncingSkills key={value._id} skills={value} />

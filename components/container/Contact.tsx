@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FormEvent, useEffect, useState } from 'react';
 import hocWrapper from '../hoc/hocWrapper';
 import Heading from '../ui/Heading';
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
@@ -19,7 +19,7 @@ const Contact = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState(false);
 
   const { username, email, message } = formData;
 
@@ -30,7 +30,8 @@ const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
     setLoading(true);
 
     const contact = {
@@ -46,17 +47,27 @@ const Contact = () => {
         setLoading(false);
         setIsSubmitted(true);
       })
-      .catch(err => setError(err || 'Something went wrong'));
+      .catch(err => setError(true))
+      .finally(() => setFormData({ username: '', email: '', message: '' }));
   };
 
+  useEffect(() => {
+    if (isSubmitted) {
+      const timer = setTimeout(() => {
+        setIsSubmitted(false);
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isSubmitted]);
   return (
-    <div className="flex flex-col items-center md:w-[700px] justify-center">
+    <div className="flex flex-col items-center w-[500px] md:w-[700px] justify-center">
       <Heading>Contact me</Heading>
-      <div className="flex items-center  gap-8 text-white/80 flex-col md:flex-row">
+      <div className="flex items-center gap-8 text-white/80 flex-col md:flex-row">
         <motion.div
           whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 0.4, ease: 'easeInOut' }}
-          className="flex items-center justify-center gap-2 bg-black/60 px-6 py-4 rounded-xl hover:text-white transition-all"
+          className="linkWrapperClass"
         >
           <AiOutlineMail className="w-8 h-8 " />
           <a href="mailto:Danevac@seznam.cz" className="">
@@ -66,7 +77,7 @@ const Contact = () => {
         <motion.div
           whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 0.4, ease: 'easeInOut' }}
-          className="flex items-center justify-center gap-2 bg-black/60 px-6 py-4 rounded-xl hover:text-white transition-all"
+          className="linkWrapperClass"
         >
           <AiOutlinePhone className="w-8 h-8 " />
           <a href="tel:+420 605 523 247" className="">
@@ -74,7 +85,7 @@ const Contact = () => {
           </a>
         </motion.div>
       </div>
-      {!isSubmitted ? (
+      {!isSubmitted && !error ? (
         <form
           onSubmit={handleSubmit}
           className="flex items-center flex-col justify-center gap-4 mt-10 mb-10 w-full"
@@ -85,7 +96,7 @@ const Contact = () => {
             className="w-full"
           >
             <input
-              className="w-full py-4 px-6 rounded-lg outline-none bg-black/60 text-white/80"
+              className="actionClass"
               type="text"
               name="username"
               value={username}
@@ -104,7 +115,7 @@ const Contact = () => {
               name="email"
               value={email}
               onChange={handleChangeInput}
-              className="w-full py-4 px-6 rounded-lg outline-none bg-black/60 text-white/80"
+              className="actionClass"
             />
           </motion.div>
           <motion.div
@@ -117,23 +128,23 @@ const Contact = () => {
               value={message}
               name="message"
               onChange={handleChangeInput}
-              className="w-full py-4 px-6 rounded-lg outline-none h-48 bg-black/60 text-white/80"
+              className="actionClass h-48"
             />
           </motion.div>
           <motion.button
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 0.4, ease: 'easeInOut' }}
-            className="bg-black/60 py-4 px-6 rounded-xl text-white/80 hover:bg-black/80 hover:text-white transition-all"
-            type="button"
+            className="actionClass w-max hover:text-white transition-all"
+            type="submit"
           >
             {!loading ? 'Send Message' : 'Sending...'}
           </motion.button>
-          {error && <p>{error}</p>}
+          {error && <p>Something went wrong!</p>}
         </form>
       ) : (
         <div className="h-64 flex items-center justify-center">
-          <p className="text-2xl font-semibold">
-            Thank you for getting in touch!
+          <p className="text-2xl font-semibold text-white/90">
+            Thank you for message!
           </p>
         </div>
       )}

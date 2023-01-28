@@ -45,7 +45,7 @@ module.exports = {
         'bouncing-first': 'bouncing-first 6s linear infinite',
         'bouncing-second': 'bouncing-second 6s linear infinite',
         'infinite-falling': 'infinite-falling 8s linear infinite',
-        'animated-line': 'animated-line 0.4s linear',
+        'animated-line': 'animated-line 0.3s linear',
       },
     },
   },

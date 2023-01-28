@@ -17,7 +17,7 @@ const ProjectInfo = ({ project, slideIndex }: Props) => {
     <motion.article
       whileInView={{ opacity: [0, 1] }}
       transition={{ duration: 0.5, ease: 'easeIn' }}
-      className="flex items-center justify-center flex-col max-w-[600px] transition ease-in-out duration-500 "
+      className="flex items-center justify-center p-2 flex-col max-w-[600px] transition ease-in-out duration-500 "
       style={{ transform: `translateX(${-100 * slideIndex}%)` }}
     >
       <h2 className="text-2xl font-semibold text-white/80">{title}</h2>
@@ -26,7 +26,7 @@ const ProjectInfo = ({ project, slideIndex }: Props) => {
       </p>
       <div className="relative group">
         <Image
-          className="max-h-full md:max-w-full sm:max-w-[500px] max-w-[350px] m-auto object-cover rounded-md shadow-lg "
+          className="max-h-full md:max-w-full sm:max-w-[500px] max-w-[325px] m-auto object-cover rounded-md shadow-lg "
           src={urlFor(imgUrl).url()}
           width={700}
           height={400}

@@ -47,7 +47,7 @@ const Projects = () => {
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5, ease: 'easeIn' }}
-        className="flex items-center gap-8 flex-wrap justify-center md:mb-8 mb-8"
+        className="flex items-center gap-8 px-4 md:px-0 flex-wrap justify-center md:mb-8 mb-8"
       >
         {[
           'Insta Clone',

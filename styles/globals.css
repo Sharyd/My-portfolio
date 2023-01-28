@@ -6,18 +6,24 @@
 
 @layer components {
   .leftArrow {
-    @apply absolute top-[80%]  md:top-[70%] left-0 w-12 h-12 flex items-center justify-center bg-white p-1 rounded-full opacity-80 active:scale-95 hover:bg-white/80;
+    @apply absolute top-[80%]  md:top-[70%] left-4 sm:left-0 w-12 h-12 flex items-center justify-center bg-white p-1 rounded-full opacity-80 active:scale-95 hover:bg-white/80;
   }
   .rightArrow {
-    @apply absolute top-[80%] md:top-[70%] right-0 w-12 h-12 flex items-center justify-center bg-white p-1 rounded-full opacity-80 active:scale-95 hover:bg-white/80;
+    @apply absolute top-[80%] md:top-[70%] right-4 sm:right-0 w-12 h-12 flex items-center justify-center bg-white p-1 rounded-full opacity-80 active:scale-95 hover:bg-white/80;
   }
-  /* .activeList {
-    @apply after:w-full after:text-white after:h-[1px] after:left-[0%] after:absolute after:top-[1.5rem] after:border-2 after:color-white after:animate-animated-line;
+  .actionClass {
+    @apply w-full py-4 px-6 rounded-lg outline-none bg-black/60 text-white/80;
   }
-  .hoverList {
-    @apply after:hover:w-full after:hover:text-white after:hover:h-[1px] after:hover:left-[0%] hover:text-white after:hover:absolute after:top-[1.5rem] after:hover:border-2 after:hover:color-white after:hover:animate-animated-line;
-  } */
+  .linkWrapperClass {
+    @apply flex items-center w-[15rem] justify-center gap-2 bg-black/60 px-6 py-4 rounded-xl hover:text-white transition-all;
+  }
 }
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   padding: 0;
@@ -28,9 +34,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
 }
