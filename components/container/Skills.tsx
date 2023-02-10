@@ -17,12 +17,12 @@ const Skills = () => {
   }, []);
 
   return (
-    <div className="flex items-center h-full justify-center flex-col relative mb-24 md:mb-0 ">
+    <div className="flex items-center h-full justify-center flex-col relative mb-24 md:mb-0">
       <div className="absolute">
         <FallingBalls />
       </div>
       <Heading>My skills</Heading>
-      <div className="relative overflow-x-hidden overflow-y-hidden flex-col w-[400px] sm:w-[550px] md:w-[700px] lg:w-[800px] h-[500px] rounded-xl p-2 bg-black/60 items-center justify-center">
+      <div className="relative overflow-x-hidden overflow-y-hidden flex-col w-[380px] sm:w-[550px] md:w-[700px] lg:w-[800px] h-[500px] rounded-xl p-2 bg-black/60 items-center justify-center">
         <div className="flex justify-between items-center text-white/80 flex-col gap-8">
           <div className="flex items-center flex-col ">
             <h3 className="px-2 mb-4 text-lg text-white border-b ">Skills</h3>

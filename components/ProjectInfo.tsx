@@ -21,7 +21,7 @@ const ProjectInfo = ({ project, slideIndex }: Props) => {
       style={{ transform: `translateX(${-100 * slideIndex}%)` }}
     >
       <h2 className="text-2xl font-semibold text-white/80">{title}</h2>
-      <p className=" text-white/90 py-2 px-6 rounded-xl my-2 text-center w-3/4 md:w-full">
+      <p className=" text-white/90 py-2 px-10 rounded-xl my-2 text-center w-3/4 md:w-full">
         {description}
       </p>
       <div className="relative group">

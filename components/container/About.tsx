@@ -18,7 +18,7 @@ const About = () => {
           <Image
             src="/computer.jpg"
             alt="computer image"
-            className=" h-1/2 w-[350px] md:w-[500px] lg:w-full lg:h-full object-cover rounded-md"
+            className=" h-1/2 w-[350px] md:w-[525px]  xl:w-full xl:h-full object-cover rounded-md"
             width={600}
             height={400}
           />
