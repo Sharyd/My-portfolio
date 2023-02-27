@@ -52,10 +52,9 @@ const Projects = () => {
         {[
           'Insta Clone',
           'Recipe App',
-          'Blog',
-          'Clothes App',
+          'Pokemon App',
+          'MovieNow App',
           'All',
-          'From Courses',
         ].map((item, index) => (
           <motion.button
             whileInView={{ rotate: [180, 0], opacity: [0, 1] }}
