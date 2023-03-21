@@ -52,7 +52,6 @@ const Projects = () => {
         {[
           'Insta Clone',
           'Recipe App',
-          'Pokemon App',
           'MovieNow App',
           'All',
         ].map((item, index) => (
